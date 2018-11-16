@@ -32,6 +32,7 @@ function init() {
     document.querySelector('.player-0-panel').classList.add('active');
     document.querySelector('.player-1-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('active');
+    document.querySelector('.dice').style.display = 'none';
 }
 
 // Event listeners
@@ -41,6 +42,7 @@ document.querySelector('.btn-new').addEventListener('click', init);
 
 function roll() {
     if(gameStatus === true) {
+        document.querySelector('.dice').style.display = 'block';
         // Get a random number
         let diceRoll = Math.ceil(Math.random() * 6);
         let turnScore = document.querySelector(`#current-${activePlayer}`);
@@ -87,6 +89,7 @@ function hold() {
             document.querySelector(`#name-${activePlayer}`).textContent = 'WINNER!';
         } else {
             // change player
+            document.querySelector('.dice').style.display = 'none';
             changePlayer();
         }
     }

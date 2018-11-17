@@ -87,6 +87,10 @@ function changePlayer() {
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     // Change DOM elements [background, active player] to new active player
     document.querySelector(`.player-${activePlayer}-panel`).classList.add('active');
+
+    // Hide dice on player change
+    document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice-2').style.display = 'none';
 }
 
 function hold() {

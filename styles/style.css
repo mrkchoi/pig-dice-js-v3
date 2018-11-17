@@ -334,3 +334,137 @@ i {
 .form__submit:active {
      font-weight: 600;
 }
+
+
+@media only screen and (max-width: 1030px) {
+    /* Prompt #1 */
+    .prompt__header {
+        margin-bottom: 1.5rem;
+        font-size: 2.4rem;
+    }
+    .prompt__list {
+        max-width: 100%;
+    }
+
+    /* Prompt #2 */
+    .prompt__intro--2 {
+        font-size: 1.4rem;
+    }
+    .prompt__intro--sub {
+        font-size: 0.9rem;
+    }
+    .form {
+        flex-direction: column;
+    }
+    .prompt__btn-2 {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    button.prompt__btn-2 {
+        width: 180px;
+    }
+
+    /* Game board */
+    .wrapper {
+        width: 90vw;
+    }
+    .player-name {
+        font-size: 26px;
+    }
+    .active .player-name::after {
+        top: -15px;
+        right: -20px;
+    }
+
+    .player-current-box {
+        background-color: #EB4D4D;
+        color: #fff;
+        width: 80%;
+}
+
+@media only screen and (max-width: 811px) {
+
+    .active .player-name::after {
+        top: -15px;
+        right: -40px;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .prompt__header {
+        font-size: 1.8rem;
+    }
+
+    .wrapper__prompt {
+        width: 95%;
+    }
+
+    .active .player-name::after {
+        top: -15px;
+        right: 10px;
+    }
+    .player-0-panel, .player-1-panel {
+        width: 50%;
+        padding: 80px 40px 40px 40px;
+    }
+
+    .btn-roll {
+        top: 483px;
+    }
+
+    .btn-hold {
+        top: 537px;
+    }
+}
+
+@media only screen and (max-width: 636px) {
+
+    .active .player-name::after {
+        top: -6px;
+        right: 18px;
+        font-size: 2rem;
+    }
+
+    .player-0-panel, .player-1-panel {
+        padding: 80px 20px 40px 20px;
+    }
+
+    .dice {
+        height: 80px;
+        top: 148px;
+    }
+
+    .dice-2 {
+        top: 240px !important;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+
+    .active .player-name::after {
+        top: -6px;
+        right: -18px;
+        font-size: 2rem;
+    }
+    .wrapper__prompt {
+        padding: 2rem 1.2rem;
+    }
+
+    .wrapper__prompt--2 {
+        width: 95%;
+        padding: 2em;
+    }
+
+    .dice {
+        height: 60px;
+        top: 223px;
+    }
+
+
+    .dice-2 {
+        top: 285px !important;
+    }
+    
+    
+}

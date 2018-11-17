@@ -10,6 +10,36 @@
     </head>
 
     <body>
+            <div class="wrapper__input--bg-1"></div>
+            <div class="wrapper__prompt intro__prompt">
+                <h1 class="prompt__header">Welcome to dice!</h1>
+                <p class="prompt__intro">
+                    A couple of rules before we begin...
+                </p>
+                <p class="prompt__content">
+                    <ul class="prompt__list">
+                        <p class="prompt__list--item">The game has 2 players, playing in rounds.</p>
+                        <p class="prompt__list--item">In each round, a player can roll the dice as many times as they wish.<br />Each roll is added up towards the player's current score.</p>
+                        <p class="prompt__list--item">BUT, if a player rolls a 1, all of their score for that round is lost.<br />After that, it's the next player's turn.</p>
+                        <p class="prompt__list--item">Also, if a player rolls (2) 6's in a row, they lose both<br />the current round and their total score.</p>
+                        <p class="prompt__list--item">A player can choose to 'Hold' at any time, which will add their<br />current round score towards their total score.<br />After that, it's the next player's turn.</p>
+                        <p class="prompt__list--item">The first player to reach the winning score, wins the game.</p>
+                    </ul> 
+                </p>
+                <a href="#" class="prompt__btn">Ready to begin!</a>
+
+            </div>
+            <div class="wrapper__input--bg-2"></div>
+            <div class="wrapper__prompt--2">
+                <p class="prompt__intro prompt__intro--2">
+                    What would you like to play until?<br /><span class="prompt__intro--sub">Enter a winning score between 10 and 100</span>
+                </p>
+                <form class="form">
+                    <input type="number" placeholder="Enter number..." class="form__input" min="10" max="100" required>
+                    <!-- <submit type="submit" class="form__submit" value="Submit"> -->
+                    <button type="submit" class="prompt__btn prompt__btn-2" value="Submit">Submit</button>
+                </form>
+            </div>
         <div class="wrapper clearfix">
             <div class="player-0-panel active">
                 <div class="player-name" id="name-0">Player 1</div>
@@ -36,6 +66,7 @@
             <img src="assets/img/dice-5.png" alt="Dice" class="dice">
         </div>
         
-        <script src="scripts/app.js"></script>
+        
+        <script src="scripts/challenge-v2.js"></script>
     </body>
 </html>

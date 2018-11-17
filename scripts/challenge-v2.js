@@ -33,6 +33,7 @@ function init() {
     document.querySelector('.player-1-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('active');
     document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.dice-2').style.display = 'none';
 }
 
 // Event listeners
@@ -46,30 +47,34 @@ document.querySelector('.btn-new').addEventListener('click', init);
 function roll() {
     if(gameStatus === true) {
         document.querySelector('.dice').style.display = 'block';
+        document.querySelector('.dice-2').style.display = 'block';
         // Get a random number
         let diceRoll = Math.ceil(Math.random() * 6);
-        // let previousRoll = diceRoll;
+        let diceRoll2 = Math.ceil(Math.random() * 6);
+
         let turnScore = document.querySelector(`#current-${activePlayer}`);
         let totalScore = document.querySelector(`#score-${activePlayer}`);
         // Update the DOM with corresponding Dice img
         document.querySelector('.dice').setAttribute('src',`assets/img/dice-${diceRoll}.png`);
+        document.querySelector('.dice-2').setAttribute('src',`assets/img/dice-${diceRoll2}.png`);
         // If value is not 1, add current value to current score
-        if(diceRoll === 6 && lastDice === 6) {
+        if(diceRoll === 1 && diceRoll2 === 1) {
             currentScore = 0;
             turnScore.textContent = currentScore;
             playerScores[activePlayer] = 0;
             totalScore.textContent = '0';
             changePlayer();
-        } else if(diceRoll !== 1) {
-            // Add roll score to current score
-            currentScore += diceRoll;
-            turnScore.textContent = currentScore;
-        } else {
-            // If value is 1, set current score to 0 & change player
+        // If value is not 1, add current value to current score
+        } else if(diceRoll === diceRoll2) {
+            // If value is snake eyes, set current score to 0 & change player
             currentScore = 0;
             turnScore.textContent = currentScore;
             // Change Player
             changePlayer();
+        } else {
+            // Add roll score to current score
+            currentScore += (diceRoll + diceRoll2);
+            turnScore.textContent = currentScore;
         }
         lastDice = diceRoll;
     }
@@ -126,7 +131,7 @@ function hideModal1() {
 
 function hideModal2(e) {
     finalScore = document.querySelector('.form__input').value;
-    if(finalScore >= 10 && finalScore <= 100) {
+    if(finalScore >= 100 && finalScore <= 500) {
         
     
         // Hide the modal
@@ -137,6 +142,8 @@ function hideModal2(e) {
     }
     
 }
+
+
 /*
 YOUR 3 CHALLENGES
 Change the game to follow these rules:

@@ -6,7 +6,7 @@
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="styles/style.css">
         
-        <title>Pig Game</title>
+        <title>Dice | Kenny Choi</title>
     </head>
 
     <body>
@@ -20,8 +20,8 @@
                     <ul class="prompt__list">
                         <p class="prompt__list--item">The game has 2 players, playing in rounds.</p>
                         <p class="prompt__list--item">In each round, a player can roll the dice as many times as they wish.<br />Each roll is added up towards the player's current score.</p>
-                        <p class="prompt__list--item">BUT, if a player rolls a 1, all of their score for that round is lost.<br />After that, it's the next player's turn.</p>
-                        <p class="prompt__list--item">Also, if a player rolls (2) 6's in a row, they lose both<br />the current round and their total score.</p>
+                        <p class="prompt__list--item">BUT, if a player rolls pairs , all of their score for that round is lost.<br />After that, it's the next player's turn.</p>
+                        <p class="prompt__list--item">Also, if a player rolls snake eyes, they lose both<br />the current round and their total score.</p>
                         <p class="prompt__list--item">A player can choose to 'Hold' at any time, which will add their<br />current round score towards their total score.<br />After that, it's the next player's turn.</p>
                         <p class="prompt__list--item">The first player to reach the winning score, wins the game.</p>
                     </ul> 
@@ -32,11 +32,10 @@
             <div class="wrapper__input--bg-2"></div>
             <div class="wrapper__prompt--2">
                 <p class="prompt__intro prompt__intro--2">
-                    What would you like to play until?<br /><span class="prompt__intro--sub">Enter a winning score between 10 and 100</span>
+                    What would you like to play until?<br /><span class="prompt__intro--sub">Enter a winning score between 100 and 500</span>
                 </p>
                 <form class="form">
-                    <input type="number" placeholder="Enter number..." class="form__input" min="10" max="100" required>
-                    <!-- <submit type="submit" class="form__submit" value="Submit"> -->
+                    <input type="number" placeholder="Enter number..." class="form__input" min="100" max="500" required>
                     <button type="submit" class="prompt__btn prompt__btn-2" value="Submit">Submit</button>
                 </form>
             </div>
@@ -64,6 +63,7 @@
             <button class="btn-hold"><i class="ion-ios-download-outline"></i>Hold</button>
             
             <img src="assets/img/dice-5.png" alt="Dice" class="dice">
+            <img src="assets/img/dice-5.png" alt="Dice" class="dice dice-2">
         </div>
         
         
